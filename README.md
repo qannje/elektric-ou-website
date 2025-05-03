@@ -75,8 +75,8 @@ flaskSite/
 ├── site.db
 ```
 ## Screenshots
-[Home page](images/elektric-ou-homepage.png)
-[Create Article page](images/elektric-ou-create_aricle.png)
+[Home page](images/elektric-ou-homepage.PNG)
+[Create Article page](images/elektric-ou-create_aricle.PNG)
 
 
 ## Future Enhancements\
