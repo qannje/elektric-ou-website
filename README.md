@@ -36,14 +36,17 @@ This is a Flask-based web application for Elektric OÜ, a professional electrica
    pip install -r requirements.txt
 ```
    
-4. Create the SQLite database:
+4. Create the SQLite database
+   (The instance/ folder is used to store the SQLite database.
+   It is intentionally empty in the repository.
+   A new database will be created there when you run the code.):
    ```bash
    python
    >>> from app import db
    >>> db.create_all()
    >>> exit()```
 
-5. Run the application:
+6. Run the application:
 ```bash
 python app.py
 ```
