@@ -24,12 +24,14 @@ This is a Flask-based web application for Elektric OÜ, a professional electrica
 1. Clone the repository:
    ```bash
    git clone https://github.com/qannje/elektric-ou-website.git
-   cd elektric-ou-website```
+   cd elektric-ou-website
+   ```
    
 2. Create a virtual environment and activate it:
    ```bash
    python -m venv venv
-   venv\Scripts\activate  # On Windows```
+   venv\Scripts\activate  # On Windows
+   ```
 
 3. Install the required dependencies
  ```bash
@@ -44,7 +46,8 @@ This is a Flask-based web application for Elektric OÜ, a professional electrica
    python
    >>> from app import db
    >>> db.create_all()
-   >>> exit()```
+   >>> exit()
+   ```
 
 6. Run the application:
 ```bash
