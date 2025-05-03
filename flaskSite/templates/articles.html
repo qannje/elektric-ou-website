@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}All Articles{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class=btn text-center mb-4>
+            <a href="{{ url_for('create_article') }}" class="btn btn-primary">Create New Article</a>
+        </div>
+        <h1 class="text-center">All Articles</h1>
+        <div class="row mt-4">
+            {% for article in articles %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        {% if article.image %}
+                            <div class="img-fluid" style="height: 200px; overflow: hidden;">
+                                <img src="{{ url_for('static', filename='uploads/' + article.image) }}" class="rounded mx-auto d-block" alt="{{ article.title }}">
+                            </div>
+                    
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ article.title }}</h5>
+                            <p class="card-intro">{{ article.intro}}...</p>
+                            <a href="{{ url_for('article_detail', article_id=article.id) }}" class="btn btn-primary">Read More</a>
+                            <p class="text-muted mt-2">Created on: {{ article.date_created }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

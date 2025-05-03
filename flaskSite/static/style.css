@@ -1,0 +1,104 @@
+:root {
+  --bs-primary: #0d6efd;
+  --bs-primary-hover: #084298;
+  --bs-primary-border: #073e86;
+  --bs-bg-light: #f8f9fa;
+  --bs-text-dark: #212529;
+}
+
+/* Base */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bs-bg-light);
+  color: var(--bs-text-dark);
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--bs-primary);
+}
+
+/* Navbar */
+.navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(to right, var(--bs-bg-light), #e2e6ea);
+  border-bottom: 2px solid #dee2e6;
+}
+
+.hero-section h1 {
+  color: var(--bs-primary);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--bs-primary-hover);
+  border-color: var(--bs-primary-border);
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+footer div {
+  opacity: 0.9;
+}
+
+/* Utility spacing for sections */
+.section {
+  padding: 3rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--bs-primary);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Article form styles (optional custom) */
+form .form-label {
+  font-weight: 500;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}

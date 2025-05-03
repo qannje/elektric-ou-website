@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Create an article{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="text-center">Create an Article</h1>
+        <form method="POST" action="/create_article" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+
+            <div class="mb-3">
+                    {{ form.title.label(class="form-label") }}
+                    {{ form.title(class="form-control") }}
+                    {% for error in form.title.errors %}
+                        <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+            </div>
+
+            <div class="mb-3">
+                    {{ form.intro.label(class="form-label") }}
+                    {{ form.intro(class="form-control") }}
+                    {% for error in form.intro.errors %}
+                        <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+            </div>
+
+            <div class="mb-3">
+                    {{ form.text.label(class="form-label") }}
+                    {{ form.text(class="form-control", rows=5) }}
+                    {% for error in form.text.errors %}
+                        <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+            </div>
+
+            <div class="mb-3">
+                    {{ form.image.label(class="form-label") }}
+                    {{ form.image(class="form-control") }}
+                    {% for error in form.image.errors %}
+                        <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+            </div>
+
+                {{ form.submit(class="btn btn-primary") }}
+        </form>
+
+            {% if form.errors %}
+                <div class="alert alert-danger mt-3">
+                    <strong>Error!</strong> Please check the form for errors.
+                </div>
+            {% endif %}
+
+            {% if success_message %}
+                <div class="alert alert-success mt-3">
+                    {{ success_message }}
+                </div>
+            {% endif %}
+
+        <div class="text-center mt-4">
+            <a href="{{ url_for('articles') }}" class="btn btn-secondary">Back to Articles</a>
+        </div>
+    </div>
+{% endblock %}
